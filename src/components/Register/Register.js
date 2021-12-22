@@ -24,7 +24,7 @@ class Register extends React.Component {
     }
 
     onSubmitRegister = () => {
-        fetch('http://localhost:3000/register', {
+        fetch('https://sheltered-eyrie-59226.herokuapp.com/register', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
@@ -40,7 +40,7 @@ class Register extends React.Component {
                     this.props.onRouteChange('home')
                 }
                 else {
-                    console.log(window.alert('The username or password you entered is incorrect'))
+                    console.log(window.alert('The username or password you entered does not met the requirements'))
                 }
             })
     }
